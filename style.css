@@ -1,14 +1,16 @@
+/* Generelle styling */
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
   color: #333;
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
 
+/* Layout */
 #container {
   display: flex;
   flex-direction: row;
@@ -16,8 +18,8 @@ body {
 }
 
 #controls {
-  width: 30%;
-  background: #fff;
+  width: 25%;
+  background: #ffffff;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
@@ -26,28 +28,29 @@ body {
 #renderer-container {
   flex: 1;
   height: 100%;
-  background: #eaeaea;
+  background: #f4f4f9;
 }
 
+/* Faneblade styling */
 .tab-buttons {
   display: flex;
   justify-content: space-around;
-  background: #f0f0f0;
-  border-bottom: 1px solid #ddd;
+  background: #e0e0e0;
+  border-bottom: 1px solid #ccc;
 }
 
 .tab-buttons button {
   flex: 1;
   padding: 10px;
   border: none;
-  background: transparent;
+  background: #f0f0f0;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .tab-buttons button:hover {
-  background: #e0e0e0;
+  background: #ddd;
 }
 
 .tab-buttons button.active {
@@ -57,15 +60,17 @@ body {
 
 .tab-panel {
   display: none;
+  padding: 15px;
 }
 
 .tab-panel.active {
   display: block;
 }
 
+/* Formular styling */
 h3 {
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 label {
@@ -78,7 +83,7 @@ input[type="number"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
 }
@@ -98,8 +103,8 @@ button:hover {
   background: #4c51bf;
 }
 
-.lock-icon {
-  font-size: 24px;
-  text-align: center;
-  margin-top: 10px;
+/* 3D-visning */
+#renderer-container {
+  background: #f9f9f9;
+  border-left: 1px solid #ccc;
 }
