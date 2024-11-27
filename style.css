@@ -1,110 +1,49 @@
-/* Generelle styling */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   background-color: #f9f9f9;
   color: #333;
-  display: flex;
-  flex-direction: column;
   height: 100vh;
+  overflow: hidden;
 }
 
-/* Layout */
 #container {
   display: flex;
-  flex-direction: row;
   height: 100%;
 }
 
 #controls {
-  width: 25%;
+  width: 300px;
+  transition: transform 0.3s ease;
   background: #ffffff;
-  padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  overflow-y: auto;
+  position: relative;
 }
 
-#renderer-container {
-  flex: 1;
-  height: 100%;
-  background: #f4f4f9;
+#controls.hidden {
+  transform: translateX(-300px);
 }
 
-/* Faneblade styling */
-.tab-buttons {
-  display: flex;
-  justify-content: space-around;
-  background: #e0e0e0;
-  border-bottom: 1px solid #ccc;
-}
-
-.tab-buttons button {
-  flex: 1;
-  padding: 10px;
+#toggle-menu {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  background: #5a67d8;
+  color: white;
   border: none;
-  background: #f0f0f0;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
   font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.tab-buttons button:hover {
-  background: #ddd;
+#menu-content {
+  padding: 20px;
 }
 
-.tab-buttons button.active {
-  background: #5a67d8;
-  color: white;
-}
-
-.tab-panel {
-  display: none;
-  padding: 15px;
-}
-
-.tab-panel.active {
-  display: block;
-}
-
-/* Formular styling */
-h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-input[type="number"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  background: #5a67d8;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background: #4c51bf;
-}
-
-/* 3D-visning */
 #renderer-container {
-  background: #f9f9f9;
-  border-left: 1px solid #ccc;
+  flex: 1;
+  background: #f4f4f9;
 }
