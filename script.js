@@ -17,7 +17,7 @@ let mannequin;
 // Indlæs mannequin-model
 const loader = new THREE.GLTFLoader();
 loader.load(
-  'https://modelviewer.dev/shared-assets/models/Astronaut.glb', // Test-model
+  'https://raw.githubusercontent.com/BassoRoger/3d-tryon/main/human_body.glb', // Test-model
   (gltf) => {
     mannequin = gltf.scene;
     mannequin.scale.set(1, 1, 1); // Justér størrelse
