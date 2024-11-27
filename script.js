@@ -23,6 +23,16 @@ scene.add(new THREE.AmbientLight(0x404040));
 // Variabel til mannequin
 let mannequin;
 
+// Fold ind/ud-menu
+const controls = document.getElementById("controls");
+const toggleMenuButton = document.getElementById("toggle-menu");
+
+toggleMenuButton.addEventListener("click", () => {
+  controls.classList.toggle("hidden");
+  toggleMenuButton.textContent = controls.classList.contains("hidden") ? "☰" : "✖";
+
+
+    
 // Indlæs mannequin-model
 const loader = new THREE.GLTFLoader();
 loader.load(
