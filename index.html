@@ -7,52 +7,56 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="tabs">
-    <div class="tab-buttons">
-      <button id="tab-simple" class="active">Simpelt prøverum</button>
-      <button id="tab-advanced">Avanceret prøverum</button>
-      <button id="tab-scanning">3D Scanning</button>
-    </div>
-    <div id="tab-content">
-      <!-- Simpelt prøverum -->
-      <div id="simple-room" class="tab-panel active">
-        <h3>Indtast dine mål</h3>
-        <label for="height">Højde (cm):</label>
-        <input type="number" id="height" placeholder="180">
-        <label for="chest">Brystmål (cm):</label>
-        <input type="number" id="chest" placeholder="90">
-        <label for="waist">Taljemål (cm):</label>
-        <input type="number" id="waist" placeholder="70">
-        <button id="updateButton">Opdater størrelse</button>
-      </div>
+  <div id="container">
+    <div id="controls">
+      <div id="tabs">
+        <div class="tab-buttons">
+          <button id="tab-simple" class="active">Simpelt prøverum</button>
+          <button id="tab-advanced">Avanceret prøverum</button>
+          <button id="tab-scanning">3D Scanning</button>
+        </div>
+        <div id="tab-content">
+          <!-- Simpelt prøverum -->
+          <div id="simple-room" class="tab-panel active">
+            <h3>Indtast dine mål</h3>
+            <label for="height">Højde (cm):</label>
+            <input type="number" id="height" placeholder="180">
+            <label for="chest">Brystmål (cm):</label>
+            <input type="number" id="chest" placeholder="90">
+            <label for="waist">Taljemål (cm):</label>
+            <input type="number" id="waist" placeholder="70">
+            <button id="updateButton">Opdater størrelse</button>
+          </div>
 
-      <!-- Avanceret prøverum -->
-      <div id="advanced-room" class="tab-panel">
-        <h3>Indtast avancerede mål</h3>
-        <label for="height-advanced">Højde (cm):</label>
-        <input type="number" id="height-advanced" placeholder="180">
-        <label for="chest-advanced">Brystmål (cm):</label>
-        <input type="number" id="chest-advanced" placeholder="90">
-        <label for="waist-advanced">Taljemål (cm):</label>
-        <input type="number" id="waist-advanced" placeholder="70">
-        <label for="thigh">Lårmål (cm):</label>
-        <input type="number" id="thigh" placeholder="50">
-        <label for="leg-length">Benlængde (cm):</label>
-        <input type="number" id="leg-length" placeholder="90">
-        <label for="arm-length">Armlængde (cm):</label>
-        <input type="number" id="arm-length" placeholder="60">
-        <button id="updateAdvancedButton">Opdater avancerede mål</button>
-      </div>
+          <!-- Avanceret prøverum -->
+          <div id="advanced-room" class="tab-panel">
+            <h3>Indtast avancerede mål</h3>
+            <label for="height-advanced">Højde (cm):</label>
+            <input type="number" id="height-advanced" placeholder="180">
+            <label for="chest-advanced">Brystmål (cm):</label>
+            <input type="number" id="chest-advanced" placeholder="90">
+            <label for="waist-advanced">Taljemål (cm):</label>
+            <input type="number" id="waist-advanced" placeholder="70">
+            <label for="thigh">Lårmål (cm):</label>
+            <input type="number" id="thigh" placeholder="50">
+            <label for="leg-length">Benlængde (cm):</label>
+            <input type="number" id="leg-length" placeholder="90">
+            <label for="arm-length">Armlængde (cm):</label>
+            <input type="number" id="arm-length" placeholder="60">
+            <button id="updateAdvancedButton">Opdater avancerede mål</button>
+          </div>
 
-      <!-- 3D Scanning -->
-      <div id="scanning-room" class="tab-panel">
-        <h3>Kommer snart</h3>
-        <p>Denne funktion er ikke tilgængelig endnu.</p>
-        <div class="lock-icon">🔒</div>
+          <!-- 3D Scanning -->
+          <div id="scanning-room" class="tab-panel">
+            <h3>Kommer snart</h3>
+            <p>Denne funktion er ikke tilgængelig endnu.</p>
+            <div class="lock-icon">🔒</div>
+          </div>
+        </div>
       </div>
     </div>
+    <div id="renderer-container"></div>
   </div>
-  <div id="renderer-container"></div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
   <script src="script.js"></script>
